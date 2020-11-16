@@ -1,0 +1,26 @@
+import time
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+driver = webdriver.Firefox(executable_path = "D:\Software\Selenium_Python\geckodriver-v0.24.0-win64\geckodriver.exe")
+driver.implicitly_wait(5)
+driver.get("https://fs2.formsite.com/meherpavan/form2/")
+driver.maximize_window()
+time.sleep(2)
+maleRadioButton = driver.find_element(By.ID,"RESULT_RadioButton-8_0").is_selected()
+femaleRadioButton = driver.find_element(By.ID,"RESULT_RadioButton-8_1").is_selected()
+print(maleRadioButton)
+print(femaleRadioButton)
+time.sleep(10)
+#driver.find_element(By.ID,"RESULT_RadioButton-8_0").click()
+#driver.find_element(By.ID,"RESULT_RadioButton-8_0").click()
+#driver.find_element_by_id("RESULT_RadioButton-8_0").click()
+#driver.find_element_by_xpath("//input[@value='Radio-0']").click
+#driver.find_element_by_css_selector("input#RESULT_RadioButton-8_0").click()
+#time.sleep(2)
+driver.find_element(By.ID,"RESULT_RadioButton-8_1").click()
+maleRadioButton1 = driver.find_element(By.ID,"RESULT_RadioButton-8_0").is_selected()
+femaleRadioButton1 = driver.find_element(By.ID,"RESULT_RadioButton-8_1").is_selected()
+print(maleRadioButton1)
+print(femaleRadioButton1)
+driver.find_element_by_id("RESULT_CheckBox-9_0").is_selected()
+driver.find_element_by_id("RESULT_CheckBox-9_0").click()

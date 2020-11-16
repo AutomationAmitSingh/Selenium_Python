@@ -1,0 +1,23 @@
+import time
+from selenium import webdriver
+from selenium.webdriver import ActionChains
+chromeOptions = webdriver.ChromeOptions()
+chromeOptions.add_experimental_option('useAutomationExtension', False)
+driver=webdriver.Chrome(executable_path="D:\Software\Selenium_Python\chromedriver_win32\chromedriver.exe", desired_capabilities = chromeOptions.to_capabilities())
+driver.implicitly_wait(5)
+driver.get("https://opensource-demo.orangehrmlive.com/")
+driver.maximize_window()
+time.sleep(2)
+driver.find_element_by_xpath("//*[@id='txtUsername']").send_keys("Admin")
+driver.find_element_by_xpath("//*[@id='txtPassword']").send_keys("admin123")
+driver.find_element_by_xpath("//*[@id='btnLogin']").click()
+time.sleep(2)
+admin = driver.find_element_by_xpath("//*[@id='menu_admin_viewAdminModule']/b")
+um = driver.find_element_by_xpath("//*[@id='menu_admin_UserManagement']")
+u = driver.find_element_by_xpath("//*[@id='menu_admin_viewSystemUsers']")
+time.sleep(2)
+action = ActionChains(driver)
+time.sleep(2)
+action.move_to_element(admin).move_to_element(um).click(u).perform()
+time.sleep(2)
+driver.quit()

@@ -1,0 +1,16 @@
+import time
+from selenium import webdriver
+chromeOptions = webdriver.ChromeOptions()
+chromeOptions.add_experimental_option('useAutomationExtension', False)
+driver=webdriver.Chrome(executable_path="D:\Software\Selenium_Python\chromedriver_win32\chromedriver.exe", desired_capabilities = chromeOptions.to_capabilities())
+driver.implicitly_wait(5)
+driver.get("https://www.countries-ofthe-world.com/flags-of-the-world.html")
+time.sleep(2)
+driver.maximize_window()
+time.sleep(2)
+#driver.execute_script("window.scrollBy(0,1000)","")
+indianFlag = driver.find_element_by_xpath("//*[@id='content']/div[2]/div[2]/table[1]/tbody/tr[86]/td[1]/img")
+#driver.execute_script("arguments[0].scrollIntoView();",indianFlag)
+driver.execute_script("window.scrollBy(0,document.body.scrollHeight)")
+time.sleep(2)
+driver.quit()

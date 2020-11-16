@@ -1,0 +1,15 @@
+2019-05-11 15:57:28,263: DEBUG This is a debug message
+2019-05-11 15:57:28,264: INFO This is a info message
+2019-05-11 15:57:28,264: WARNING This is a warning message
+2019-05-11 15:57:28,264: ERROR This is a error message
+2019-05-11 15:57:28,264: CRITICAL This is a critical message
+05/11/2019 04:01:01 PM: DEBUG This is a debug message
+05/11/2019 04:01:01 PM: INFO This is a info message
+05/11/2019 04:01:01 PM: WARNING This is a warning message
+05/11/2019 04:01:01 PM: ERROR This is a error message
+05/11/2019 04:01:01 PM: CRITICAL This is a critical message
+05/11/2019 04:03:50 PM: DEBUG This is a debug message
+05/11/2019 04:03:50 PM: INFO This is a info message
+05/11/2019 04:03:50 PM: WARNING This is a warning message
+05/11/2019 04:03:50 PM: ERROR This is a error message
+05/11/2019 04:03:50 PM: CRITICAL This is a critical message
